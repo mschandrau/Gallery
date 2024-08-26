@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="./style/login.css">
+</head>
+<body>
+     <!--- Login file--->
+    <header>
+        <a href="index.html" class="logo"> Logo</a>
+        <nav>
+          
+        </nav>
+        <a href="new-login.html" class="action">Create</a>
+    </header>
+    <main>
+        <div class="create">
+            <form action="">
+                <div class="input">
+                    <span id="usernameError" class="error"></span>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="user" class="uname" placeholder="Create username">
+                    <span id="passwordError" class="error"></span>
+                    <label for="password">Password</label>
+                    <input type="text" name="password" id="pass" class="password" placeholder="Create password">
+                </div>
+                <button type="submit" name="sub" id="sub" class="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+    <script>
+        const form = document.getElementById('form');
+const username = document.getElementById('user');
+const passwordInput = document. getElementById('pass');
+const usererror = document.getElementById('usernameError');
+const passworderror = document.getElementById('passwordlError');
+
+form.addEventListener('submit',(e) =>{
+    e.preventDefault();
+    validateForm();
+});
+
+function validateForm() {
+    let isvalid = true;
+    if(username.value.trim () === '') {
+        usererror.textContent = 'username is requied';
+        isvalid = false;
+    }else{
+        usererror.textContent = '';
+    }
+    if (passwordInput.value.trim() === '') {
+        passwordError.textContent = 'Password is required';
+        isValid = false;
+    } else if (passwordInput.value.length < 8) {
+        passwordError.textContent = 'Password must be at least 8 characters long';
+        isValid = false;
+    } else {
+        passwordError.textContent = '';
+    }
+    
+}
+    </script>
+</body>
+</html>

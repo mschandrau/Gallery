@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="./style/login.css">
+</head>
+<body>
+     <!--- new login file--->
+    <header>
+        <a href="index.html" class="logo"> Logo</a>
+        <nav>
+          
+        </nav>
+        <a href="login.html" class="action">Login</a>
+    </header>
+    <main>
+        <div class="create">
+            <form action="" id="form">
+                <div class="input">
+                    <span id="emailError" class="error"></span>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="inemail" class="email" placeholder="Enter a email">
+                    <span id="usernameError" class="error"></span>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="user" class="uname" placeholder="Create username">
+                    <span id="passwordError" class="error"></span>
+                    <label for="password">Password</label>
+                    <input type="text" name="password" id="pass" class="password" placeholder="Create password">
+                    
+                </div>
+                <button type="submit" name="sub" id="sub" class="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+    <script src="./script/app.js"></script>
+</body>
+</html>
